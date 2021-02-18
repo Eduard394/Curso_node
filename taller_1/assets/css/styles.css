@@ -1,0 +1,30 @@
+
+/*html body {
+	font-size: 10px;
+}*/
+.banner{
+	position: relative;
+	height: 300px;
+	background-image: url('../images/banner.webp');
+	/*filter: opacity(0.8);*/
+}
+
+
+.banner .mask {
+	position: absolute;
+	background-color: white;
+	opacity: 0.3;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	/*height: 500px;
+	width: 500px;*/
+}
+
+.banner .text h1{
+	z-index: 2;
+	font-size: 3rem;
+	font-weight: bold;
+}
