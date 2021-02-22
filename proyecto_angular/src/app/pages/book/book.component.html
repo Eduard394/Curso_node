@@ -1,0 +1,50 @@
+<div class="container">
+	<div><h1>{{libro['name']}}</h1></div>
+	<div class="row">		
+	  <div class="col-12 col-md-6 col-sm-12 col-xs-12">
+	    <div class="bg-dark" >
+	    	<img src=".././assets/images/book.jpg" class="card-img-top img-responsive" alt="Responsive image">
+	    </div>
+	  </div>
+	  <div class="col-12 col-md-6">
+	    <div>	    	
+	      	<p>Qui mollit incididunt excepteur minim est ad. Aute et ex velit nostrud incididunt aute amet aute cupidatat
+	        eiusmod culpa est minim. Veniam excepteur esse deserunt quis officia nostrud veniam voluptate aliquip do non
+	        deserunt non Lorem. Incididunt elit occaecat amet est proident ex.
+
+	        Laboris dolore ullamco proident ea commodo id commodo nisi nostrud est proident. Ullamco ipsum dolore
+	        voluptate est duis dolor magna consectetur aliquip ex. Pariatur minim ea sunt magna labore. Officia
+	        consectetur anim reprehenderit irure duis minim reprehenderit et enim enim amet pariatur ea ipsum. Laboris
+	        ut
+	        et nulla non consequat exercitation eiusmod sit aliqua deserunt aliqua duis cillum minim.
+	        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui minus est optio nam enim tempore quibusdam. Cum, illo eos voluptates aliquam animi, rem, delectus, eveniet praesentium tenetur enim blanditiis dolorum.
+	        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque libero maiores, quia saepe perspiciatis, sunt! Consectetur vero, blanditiis unde totam fugiat nisi, corrupti, quisquam commodi, dolorum voluptatum dignissimos facilis iusto?
+	    	</p>
+	    	<p>{{libro['description']}}</p>
+	      <div class="col-12">
+	        <h5 class="text-info">valor Unitario $ {{libro['unitValue']}}</h5>
+	        <label>Cantidad </label>
+	        <input type="number" class="form-group w-25 m-2 p-1" id="cantidad" value="1">
+	        <br>
+	        <div class="col-12 col-md-12 col-sm-12 card-footer bg-transparent border-secundary"></div>			
+	      </div>
+	      <div class="col-12">
+				<div class="row">
+					<div class="col-6">
+						<div class="d-flex flex-row">
+						  <div class="p-2 ">
+						  	<label><h4 class="text-info">Total $ : {{libro['unitValue']}}</h4> </label></div>
+						</div>
+					</div> 
+					<div class="col-6">
+						<div class="d-flex flex-row-reverse">
+						  <div class="p-2 m-1"><button (click)="getClients()" class="btn btn-info"><i class="fa fa-shopping-cart"></i> Añadir al Carrito</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+
+	  </div>
+	</div>
+</div>
