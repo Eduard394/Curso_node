@@ -12,12 +12,21 @@ import { HeaderComponent } from './layout/header/header.component';
 import { BannerComponent } from './layout/banner/banner.component';
 import { HomeComponent } from './pages/home/home.component';
 
+
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { MenuComponent } from './menu/menu.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BannerComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,9 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     FormsModule,
-    CommonModule
+    CommonModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    [TabsModule.forRoot()],
   ],
   providers: [],
   bootstrap: [AppComponent]

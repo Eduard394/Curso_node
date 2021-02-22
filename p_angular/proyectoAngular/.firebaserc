@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "proyectoangular202": {
+      "hosting": {
+        "proyectoAngular": [
+          "proyectoangular202"
+        ]
+      }
+    }
+  }
+}

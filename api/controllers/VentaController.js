@@ -1,5 +1,5 @@
 const models = require('../models/Venta');
-
+const ventas = require('../models/Venta');
 
 exports.list = async(req, res, next) => {
     try {
@@ -61,7 +61,18 @@ exports.delete = async(req, res,next) => {
 
 
 exports.findById = async(req, res, next) => {
-    console.log(req.params)
+
+    ventas.findOne({_id: '602db25792421e826d501b6f'},(error, venta) =>{
+        console.log(venta)
+        const r = venta.populate('client').execPopulate((e,a) => {
+            console.log('e  ',e)
+            console.log('a  ',a)
+        })
+        console.log('r  ', r)
+        resolve('exito')
+    })
+
+    /* console.log(req.params)
     try {
         const venta = await models.Venta.findOne({ _id: req.body.id })
         if(venta ==null){
@@ -75,5 +86,5 @@ exports.findById = async(req, res, next) => {
             message: 'Ocurrió un error'
         });
         next(error);
-    }
+    } */
 };
